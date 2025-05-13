@@ -3,50 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Página Móvil</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <header>
-    <h1>Mi Página Móvil</h1>
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <section id="inicio">
-        <h2>Bienvenido</h2>
-        <p>Texto de ejemplo para la sección de inicio.</p>
-    </section>
-
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Servicio 1</li>
-            <li>Servicio 2</li>
-            <li>Servicio 3</li>
-        </ul>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <button type="submit">Enviar</button>
+    <div class="login-container">
+        <div class="log-container">
+        <img src="log/Logo_1.png" alt="Logo de tu marca" class="logo">
+    </div>
+        <h1>Iniciar Sesión</h1>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Recordar mis datos</label>
+            </div>
+            
+            <button type="submit" class="login-button">INGRESAR</button>
         </form>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2023 Tu Nombre</p>
-</footer>
+        
+        <div class="links">
+            <a href="#">Crear cuenta</a>
+            <a href="#">¿Has olvidado tu contraseña?</a>
+        </div>
+    </div>
 </body>
 </html>
