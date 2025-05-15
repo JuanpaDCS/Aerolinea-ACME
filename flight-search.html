@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Vuelos | ACME AIR</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="desktop-error">
+        <p>Esta aplicación solo está disponible para dispositivos móviles.</p>
+    </div>
+    
+    <div class="mobile-content">
+        <header class="header">
+            <div class="logo-container">
+                <img src="log/logo2.png" alt="ACME AIR Logo" class="logo">
+                <div class="logo-text-container">
+                    <h1 class="logo-text">ACME AIR</h1>
+                    <p class="slogan">Hiring to your dreams</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="user-info">
+            <span>Juan Pablo</span>
+            <a href="index.html">Cerrar Sesión</a>
+        </div>
+
+        <main class="container">
+            <h2>Búsqueda de Vuelos</h2>
+            
+            <form class="search-form" action="available-flights.html">
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="one-way">
+                    <label for="one-way">Solo ida</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="origin">Origen</label>
+                    <select id="origin" required>
+                        <option value="">Seleccione origen</option>
+                        <option value="bogota">Bogotá</option>
+                        <option value="medellin">Medellín</option>
+                        <option value="barranquilla">Barranquilla</option>
+                        <option value="cartagena">cartagena</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="destination">Destino</label>
+                    <select id="destination" required>
+                        <option value="">Seleccione destino</option>
+                        <option value="bogota">Bogotá</option>
+                        <option value="medellin">Medellín</option>
+                        <option value="barranquilla">Barranquilla</option>
+                        <option value="cartagena">cartagena</option>
+                        
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="departure-date">Fecha de salida</label>
+                    <input type="date" id="departure-date" required>
+                </div>
+                
+                <div class="form-group return-date">
+                    <label for="return-date">Fecha de regreso</label>
+                    <input type="date" id="return-date">
+                </div>
+                
+                <button type="submit" class="search-button">BUSCAR</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
