@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Contraseña | ACME AIR</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="desktop-error">
+        <p>Esta aplicación solo está disponible para dispositivos móviles.</p>
+    </div>
+    
+    <div class="mobile-content">
+        <header class="header">
+            <div class="logo-container">
+                <img src="log/logo2.png" alt="ACME AIR Logo" class="logo">
+                <div class="logo-text-container">
+                    <h1 class="logo-text">ACME AIR</h1>
+                    <p class="slogan">Flying to your dreams</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <h2>Crear Contraseña</h2>
+            <hr>
+            
+            <form class="password-form" action="menu.html">
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="repeat-password">Repetir Contraseña</label>
+                    <input type="password" id="repeat-password" required>
+                </div>
+                
+                <button type="submit" class="submit-button">GUARDAR</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

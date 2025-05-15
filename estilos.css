@@ -1,103 +1,247 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #333;
 }
 
-/* Encabezado */
+.desktop-error {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: red;
+    font-size: 18px;
+}
+
+.mobile-content {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .mobile-content {
+        display: none;
+    }
+    
+    .desktop-error {
+        display: block;
+        padding-top: 50vh;
+    }
+}
+
 .header {
-  width: 100%;
-  padding: 20px;
-  background: linear-gradient(to right, #d63c93, #4b90df);
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, #d63c93, #4b90df);
+    display: flex;
+    justify-content: center;
 }
 
 .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo {
-  height: 40px;
+    height: 40px;
 }
 
 .logo-text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
 }
 
 .logo-text {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .slogan {
-  font-size: 12px;
-  margin: 0;
+    font-size: 12px;
+    margin: 0;
 }
 
-/* Contenido principal */
+.user-info {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+}
+
+.user-info a {
+    color: #2196f3;
+    text-decoration: none;
+}
+
 .container {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h2 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #000000;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 hr {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0 20px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-input,
-select {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-select {
-  appearance: none;
-  background: white;
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 
-button {
-  background-color: #2196f3;
-  color: white;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-button:hover {
-  background-color: #1976d2;
+
+button, .back-button {
+    background-color: #2196f3;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover, .back-button:hover {
+    background-color: #1976d2;
+}
+
+.flight-list {
+    margin: 20px 0;
+}
+
+.flight-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px 10px;
+}
+
+.flight-time {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+}
+
+.flight-number {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+}
+
+.flight-duration {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.flight-price, .flight-status {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: right;
+}
+
+.flight-date {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 14px;
+    color: #666;
+}
+
+.flight-route {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.menu-link {
+    background-color: #2196f3;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.menu-link.logout {
+    background-color: #f44336;
+}
+
+.menu-link:hover {
+    opacity: 0.9;
+}
+
+.user-greeting {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.flight-info {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.flight-info p {
+    margin: 5px 0;
+}
+
+.route-date {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
 }
