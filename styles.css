@@ -11,16 +11,6 @@ body {
     color: #333;
 }
 
-/* Estilos para el logo */
-.log-container {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.logo {
-    max-width: 150px; /* Ajusta el tamaño según tu logo */
-    height: auto;
-}
 .login-container {
     background-color: white;
     border-radius: 10px;
@@ -107,4 +97,13 @@ h1 {
 
 .links a:hover {
     text-decoration: underline;
+}
+.logo-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px; /* Ajusta el tamaño según tu logo */
+    height: auto;
 }
